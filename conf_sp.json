@@ -1,0 +1,61 @@
+{
+    "Name":"OPCUA Gateway",
+	"Version":"1.0",
+	"AddressSpace":[	//地址空间数组，每个元素是一个对象，一个对象是一个节点
+		{
+			"NodeID_NamespaceIndex":1,	
+			"NodeID_IDType":"String",					//ID类型：String、Numeric，不支持GUID
+			"NodeID_ID":"TH10S-B",						//类型由NodeID_IDType确定
+			"NodeClass":"Object",						//节点类型：对象
+			"BrowseName":"Temperature sensor",
+			"DisplayName":"Temperature sensor TH10S-B",
+			"Description":"Temperature sensor",
+			"ParentNodeId":"ObjectsFolder",
+			"ReferenceTypeId":"Organizes",				//引用类型：Organizes、HasProperty、HsaComponent
+			"QualifiedName":"Temperature sensor",
+			"ChildNode":[								//下属节点，与该节点有向下的层次引用关系，具体引用类型在子节点中指定
+				{
+					"NodeID_NamespaceIndex":1,
+					"NodeID_IDType":"string",
+					"NodeID_ID":"Temperature",			//部件：温度
+					"NodeClass":"Variable",				//节点类型：变量容器
+					"BrowseName":"Temperature",
+					"DisplayName":"Temperature",
+					"Description":"Temperature",
+					"ReferenceTypeId":"HasProperty",	//与上层node的引用关系
+					"QualifiedName":"Temperature",
+					"DataType":"Double",				//数据类型：double
+					"InitialValue":12.0,				//初始数据-类型由“DataType”字段指定
+					"BottomProtocolType":"Modbus",			//底层协议：modbus-指示数据来源****以下字段根据协议类型不同而不同
+					"MB_MachineAddress":0,				//从机地址
+					"MB_RegisterAddress":0,				//数据寄存器地址
+					"MB_FunctionCode":3,				//功能码
+					"MB_DataBitSize":16,				//数据宽度-位为单位
+					"RefreshFrequency":1000,			//刷新频率：1000ms-单位为ms
+					"BottomDataType":"uint16_t",		//下层来的数据类型：uint16_t
+					"MappingCoefficient":0.1			//映射系数，OPCUAData = BottomData * MappingCoefficient
+				},{
+					"NodeID_NamespaceIndex":1,
+					"NodeID_IDType":"string",
+					"NodeID_ID":"Humidity",
+					"NodeClass":"Variable",
+					"BrowseName":"Humidity",
+					"DisplayName":"Humidity",
+					"Description":"Humidity",
+					"ReferenceTypeId":"HasProperty",
+					"QualifiedName":"Humidity",
+					"DataType":"Double",
+					"InitialValue":13,
+					"BottomProtocol":"Modbus",
+					"MB_MachineAddress":0,
+					"MB_RegisterAddress":1,
+					"MB_FunctionCode":3,
+					"MB_DataBitSize":16,
+					"RefreshFrequency":1000,
+					"BottomDataType":"uint16_t",
+					"MappingCoefficient":0.1
+				}
+			]
+		}
+	]
+}

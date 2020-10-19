@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="树莓派网关">
+    <meta name="description" content="OPCUA Gateway.">
+    <link rel="stylesheet" href="style.css">
+    <title>OPC UA Gateway</title>
+    <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script> 
+    <script>
+    </script>
+</head>
+<body>
+    <div id="TopBar">
+        <p><span style="color:aquamarine;padding-left:10px;">( • ̀ω•́ )✧</span>  | OPC UA<a href="Javascript:displayLOG();">网关控制台</a><span style="font-size: 20px;"> V1.0</span></p>
+    </div>
+    <div id="right_box">
+        <div id="opcuainfo">
+            <div style="position: absolute;right: 10%;top: 65px;font-size: 30px;">状态：<span style="color: green;">正常运行</span></div>
+            <div style="font-size: 25px;padding: 30px 0 0 80px;width: 200px;">OPC UA 网关</div>
+            <div style="padding: 0px 0 0 80px;width: 200px;">编号：0X8S5FD412SDG1</div>
+            <div class="devBox">
+                <div style="width: 100%;margin-top: 3px;margin-bottom: 3px;"> 南向设备：</div>
+                <div class="dev">
+                    <div style="padding: 10px;padding-bottom: 0;">设备1：温湿度计&nbsp;&nbsp;&nbsp;<span style="font-family: 微软雅黑;color: greenyellow;">连接成功</span></div>
+                    <div style="padding: 10px;padding-top: 0;padding-bottom: 0;">设备协议：Modbus</div>
+                    <div style="padding: 10px;padding-top: 0;">设备地址：0x0052</div>
+                </div>
+                <div class="dev">
+                    <div style="padding: 10px;padding-bottom: 0;">设备2：位移传感器&nbsp;&nbsp;&nbsp;<span style="font-family: 微软雅黑;color: orange;">连接断开</span></div>
+                    <div style="padding: 10px;padding-top: 0;padding-bottom: 0;">设备协议：Modbus</div>
+                    <div style="padding: 10px;padding-top: 0;">设备地址：0x0051</div>
+                </div>
+                <div class="dev">
+                    <div style="padding: 10px;padding-bottom: 0;">设备3：倾角传感器&nbsp;&nbsp;&nbsp;<span style="font-family: 微软雅黑;color: greenyellow;">连接成功</span></div>
+                    <div style="padding: 10px;padding-top: 0;padding-bottom: 0;">设备协议：Modbus</div>
+                    <div style="padding: 10px;padding-top: 0;">设备地址：0x0050</div>
+                </div>
+                <div class="dev">
+                    <div style="padding: 10px;padding-bottom: 0;">设备4：风机&nbsp;&nbsp;&nbsp;<span style="font-family: 微软雅黑;color: greenyellow;">连接成功</span></div>
+                    <div style="padding: 10px;padding-top: 0;padding-bottom: 0;">设备协议：Modbus</div>
+                    <div style="padding: 10px;padding-top: 0;">设备地址：0x004f</div>
+                </div>
+                <div class="dev">
+                    <div style="padding: 10px;padding-bottom: 0;">设备5：挤压机&nbsp;&nbsp;&nbsp;<span style="font-family: 微软雅黑;color: greenyellow;">连接成功</span></div>
+                    <div style="padding: 10px;padding-top: 0;padding-bottom: 0;">设备协议：Modbus</div>
+                    <div style="padding: 10px;padding-top: 0;">设备地址：0x004e</div>
+                </div>
+                <div class="dev">
+                    <div style="padding: 10px;padding-bottom: 0;">设备6：电流表&nbsp;&nbsp;&nbsp;<span style="font-family: 微软雅黑;color: orange;">连接断开</span></div>
+                    <div style="padding: 10px;padding-top: 0;padding-bottom: 0;">设备协议：Modbus</div>
+                    <div style="padding: 10px;padding-top: 0;">设备地址：0x0051</div>
+                </div>
+                <div class="dev">
+                    <div style="padding: 10px;padding-bottom: 0;">设备6：电流表&nbsp;&nbsp;&nbsp;<span style="font-family: 微软雅黑;color: orange;">连接断开</span></div>
+                    <div style="padding: 10px;padding-top: 0;padding-bottom: 0;">设备协议：Modbus</div>
+                    <div style="padding: 10px;padding-top: 0;">设备地址：0x0051</div>
+                </div>
+                <div class="dev">
+                    <div style="padding: 10px;padding-bottom: 0;">设备6：电流表&nbsp;&nbsp;&nbsp;<span style="font-family: 微软雅黑;color: orange;">连接断开</span></div>
+                    <div style="padding: 10px;padding-top: 0;padding-bottom: 0;">设备协议：Modbus</div>
+                    <div style="padding: 10px;padding-top: 0;">设备地址：0x0051</div>
+                </div>
+                <div class="dev">
+                    <div style="padding: 10px;padding-bottom: 0;">设备6：电流表&nbsp;&nbsp;&nbsp;<span style="font-family: 微软雅黑;color: orange;">连接断开</span></div>
+                    <div style="padding: 10px;padding-top: 0;padding-bottom: 0;">设备协议：Modbus</div>
+                    <div style="padding: 10px;padding-top: 0;">设备地址：0x0051</div>
+                </div>
+                <div class="dev">
+                    <div style="padding: 10px;padding-bottom: 0;">设备6：电流表&nbsp;&nbsp;&nbsp;<span style="font-family: 微软雅黑;color: orange;">连接断开</span></div>
+                    <div style="padding: 10px;padding-top: 0;padding-bottom: 0;">设备协议：Modbus</div>
+                    <div style="padding: 10px;padding-top: 0;">设备地址：0x0051</div>
+                </div>
+            </div>
+        </div>
+        <div id="start">
+            <button type="button" onclick="changeIMG();setInterval('getUserInfo()',5000)">地址空间配置</button>
+        </div>
+    </div>
+    <div id="left_box">
+        <div style="height: 80px;"></div>
+        <div><a href="../index.html">网关信息</a></div>
+        <div><a href="./editModel.html">模型编辑</a></div>
+        <div style="background-color: #5b6980;">实时状态</div>
+        <div><a href="./ctrlGateway.html">网关控制</a></div>
+        <div><a href="./about.html">关 于</a></div>
+        <div><a href="./help.html">帮 助</a></div>
+    </div>
+</body>
+</html> 

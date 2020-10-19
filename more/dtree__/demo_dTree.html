@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<title>Destroydrop &raquo; Javascripts &raquo; Tree</title>
+
+	<link rel="StyleSheet" href="dtree.css" type="text/css" />
+	<script type="text/javascript" src="dtree.js"></script>
+</head>
+
+<body>
+
+
+<h2>Example</h2>
+<p>&nbsp;</p>
+
+<div class="dtree" id="dtree1">
+
+	<script type="text/javascript">
+
+		d = new dTree('d',"dtree1",'goods');
+
+		d.add(0,-1,'点击展开商品分类信息',"javascript:d.getChildren(0)");
+		
+		d.show();
+
+
+	</script>
+
+</div>
+
+<p>&nbsp;</p>
+
+<div class="dtree" id="dtree2">
+
+	<script type="text/javascript">
+
+		w = new dTree('w',"dtree2",'consumer');
+
+		w.add(0,-1,'点击展开客户分类信息',"javascript:w.getChildren(0)");
+		
+		w.show();
+
+
+	</script>
+
+</div>
+
+<p>&nbsp;</p>
+
+<div class="dtree" id="dtree3">
+
+	<script type="text/javascript">
+
+		z = new dTree('z',"dtree3",'vendor');
+
+		z.add(0,-1,'点击展开商家分类信息',"javascript:z.getChildren(0)");
+		
+		z.show();
+
+
+	</script>
+
+</div>
+
+
+</body>
+
+</html>

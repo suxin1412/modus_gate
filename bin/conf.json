@@ -1,0 +1,61 @@
+{
+    "Name":"OPCUA Gateway",
+	"Version":"1.0",
+	"AddressSpace":[
+		{
+			"NodeID_NamespaceIndex":1,
+			"NodeID_IDType":"String",
+			"NodeID_ID":"TH10S-B",
+			"NodeClass":"Object",
+			"BrowseName":"Temperature sensor",
+			"DisplayName":"Temperature sensor TH10S-B",
+			"Description":"Temperature sensor",
+			"ParentNodeId":"ObjectsFolder",
+			"ReferenceTypeId":"Organizes",
+			"QualifiedName":"Temperature sensor",
+			"ChildNode":[
+				{
+					"NodeID_NamespaceIndex":1,
+					"NodeID_IDType":"String",
+					"NodeID_ID":"Temperature",
+					"NodeClass":"Variable",
+					"BrowseName":"Temperature",
+					"DisplayName":"Temperature",
+					"Description":"Temperature",
+					"ReferenceTypeId":"HasProperty",
+					"QualifiedName":"Temperature",
+					"DataType":"Double",
+					"InitialValue":12.0,
+					"BottomProtocol":"Modbus",
+					"MB_MachineAddress":0,
+					"MB_RegisterAddress":0,
+					"MB_FunctionCode":3,
+					"MB_DataBitSize":16,
+					"RefreshFrequency":1000,
+					"BottomDataType":"uint16_t",
+					"MappingCoefficient":0.1
+				},{
+					"NodeID_NamespaceIndex":1,
+					"NodeID_IDType":"String",
+					"NodeID_ID":"Humidity",
+					"NodeClass":"Variable",
+					"BrowseName":"Humidity",
+					"DisplayName":"Humidity",
+					"Description":"Humidity",
+					"ReferenceTypeId":"HasProperty",
+					"QualifiedName":"Humidity",
+					"DataType":"Double",
+					"InitialValue":13.1,
+					"BottomProtocol":"Modbus",
+					"MB_MachineAddress":0,
+					"MB_RegisterAddress":1,
+					"MB_FunctionCode":3,
+					"MB_DataBitSize":16,
+					"RefreshFrequency":1000,
+					"BottomDataType":"uint16_t",
+					"MappingCoefficient":0.1
+				}
+			]
+		}
+	]
+}

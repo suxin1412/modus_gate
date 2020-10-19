@@ -1,0 +1,296 @@
+﻿<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="树莓派网关">
+    <meta name="description" content="OPCUA Gateway.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="StyleSheet" href="./dtree/dtree.css" type="text/css">
+    <title>OPC UA Gateway</title>
+    <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script> 
+    <script type="text/javascript" src="./dtree/dtree.js"></script>
+    <script src="editModel.js"></script>
+</head>
+<body>
+    <div id="TopBar">
+        <p><span style="color:aquamarine;">( • ̀ω•́ )✧</span>  | OPC UA<a href="Javascript:displayLOG();">网关控制台</a><span style="font-size: 30px;"> V1.0</span></p>
+    </div>
+    <div id="right_box">
+        <div id="ModelEdit">
+            <div style="position: absolute;right: 10%;top: 65px;font-size: 30px;">状态：<span style="color: green;">正常运行</span></div>
+            <div style="font-size: 25px;padding: 30px 0 0 80px;width: 200px;">OPC UA 网关</div>
+            <div style="padding: 0px 0 0 80px;width: 200px;">编号：0X8S5FD412SDG1</div>
+            <div class="combox">
+                <div id="devTree" >
+                    <div style="width: 100%;margin-top: 3px;margin-bottom: 3px;">当前模型：</div>
+                </div>
+                <div id="nodeAttributes">
+                    <div class="nodeAttrBox"><!-- 基本属性 -->
+                        <div class="nodeAttrTitle">
+                            Base Attributes
+                        </div>
+                        <div class="nodeAttrItem">
+                            <table style="width: 100%;">
+                                <tr>
+                                    <td style="width: 15%;"><span>Node ID:</span></td>
+                                    <td>
+                                        <select name="NodeID_NamespaceIndex" id="NodeID_NamespaceIndex" style="width: 10%;">
+                                            <option value="1">1</option>
+                                            <option value="0">0</option>
+                                        </select>
+                                        <select name="NodeID_Type" id="NodeID_Type" style="width: 10%;">
+                                            <option value="String">String</option>
+                                            <option value="Numeric">Numeric</option>
+                                        </select>
+                                        <input type="text" name="NodeID" id="NodeID" style="width: 69%;">
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="nodeAttrItem">
+                            <table style="width: 100%;">
+                                <tr>
+                                    <td style="width: 15%;"><span>Node Class:</span></td>
+                                    <td>
+                                        <select name="NodeClass" id="NodeClass" style="width: 90%;">
+                                            <option value="Object">Object</option>
+                                            <option value="Variable">Variable</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="nodeAttrItem">
+                            <table style="width: 100%;">
+                                <tr>
+                                    <td style="width: 15%;"><span>Display Name:</span></td>
+                                    <td><input type="text" name="DisplayName" id="DisplayName" style="width: 90%;"></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="nodeAttrItem">
+                            <table style="width: 100%;">
+                                <tr>
+                                    <td style="width: 15%;"><span>Brower Name:</span></td>
+                                    <td><input type="text" name="BrowerName" id="BrowerName" style="width: 90%;"></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="nodeAttrItem">
+                            <table style="width: 100%;">
+                                <tr>
+                                    <td style="width: 15%;"><span>Qualified Name:</span></td>
+                                    <td><input type="text" name="QualifiedName" id="QualifiedName" style="width: 90%;"></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="nodeAttrItem">
+                            <table style="width: 100%;">
+                                <tr>
+                                    <td style="width: 15%;"><span>Description:</span></td>
+                                    <td><input type="text" name="Description" id="Description" style="width: 90%;"></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="nodeAttrItem">
+                            <table style="width: 100%;">
+                                <tr>
+                                    <td style="width: 15%;"><span>Reference Type:</span></td>
+                                    <td>
+                                        <select name="ReferenceTypeId" id="ReferenceTypeId" style="width: 90%;">
+                                            <option value="Organizes">Organizes</option>
+                                            <option value="HasProperty">HasProperty</option>
+                                            <option value="HsaComponent">HsaComponent</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="nodeAttrBox"><!-- 容器 -->
+                        <div class="nodeAttrTitle">
+                            Variable Attributes
+                        </div>
+                        <div class="nodeAttrItem">
+                            <table style="width: 100%;">
+                                <tr>
+                                    <td style="width: 15%;"><span>DataType:</span></td>
+                                    <td>
+                                        <select name="DataType" id="DataType" style="width: 90%;">
+                                            <option value="Double">Double</option>
+                                            <option value="Int">Int</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="nodeAttrItem">
+                            <table style="width: 100%;">
+                                <tr>
+                                    <td style="width: 15%;"><span>InitialValue:</span></td>
+                                    <td><input type="text" name="InitialValue" id="InitialValue" style="width: 90%;"></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="nodeAttrBox"><!-- 底层协议 -->
+                        <div class="nodeAttrTitle">
+                            Bottom Protocol
+                        </div>
+                        <div class="nodeAttrItem">
+                            <table style="width: 100%;">
+                                <tr>
+                                    <td style="width: 15%;"><span>BottomProtocolType:</span></td>
+                                    <td>
+                                        <select name="BottomProtocolType" id="BottomProtocolType" style="width: 90%;">
+                                            <option value="Modbus">Modbus</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="nodeAttrItem">
+                            <table style="width: 100%;">
+                                <tr>
+                                    <td style="width: 15%;"><span>MB_MachineAddress:</span></td>
+                                    <td><input type="text" name="MB_MachineAddress" id="MB_MachineAddress" style="width: 90%;"></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="nodeAttrItem">
+                            <table style="width: 100%;">
+                                <tr>
+                                    <td style="width: 15%;"><span>MB_FunctionCode:</span></td>
+                                    <td><input type="text" name="MB_FunctionCode" id="MB_FunctionCode" style="width: 90%;"></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="nodeAttrItem">
+                            <table style="width: 100%;">
+                                <tr>
+                                    <td style="width: 15%;"><span>MB_DataBitSize:</span></td>
+                                    <td><input type="text" name="MB_DataBitSize" id="MB_DataBitSize" style="width: 90%;"></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="nodeAttrItem">
+                            <table style="width: 100%;">
+                                <tr>
+                                    <td style="width: 15%;"><span>MB_RegisterAddress:</span></td>
+                                    <td><input type="text" name="MB_RegisterAddress" id="MB_RegisterAddress" style="width: 90%;"></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="nodeAttrItem">
+                            <table style="width: 100%;">
+                                <tr>
+                                    <td style="width: 15%;"><span>RefreshFrequency:</span></td>
+                                    <td><input type="text" name="RefreshFrequency" id="RefreshFrequency" style="width: 90%;"></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="nodeAttrItem">
+                            <table style="width: 100%;">
+                                <tr>
+                                    <td style="width: 15%;"><span>MappingCoefficient:</span></td>
+                                    <td><input type="text" name="MappingCoefficient" id="MappingCoefficient" style="width: 90%;"></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="nodeAttrItem">
+                            <table style="width: 100%;">
+                                <tr>
+                                    <td style="width: 15%;"><span>BottomDataType:</span></td>
+                                    <td>
+                                        <select name="BottomDataType" id="BottomDataType" style="width: 90%;">
+                                            <option value="uint16_t">uint16_t</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="nodeAttrBox"><!-- 子节点 -->
+                        <div class="nodeAttrTitle">
+                            Children Node
+                        </div>
+                        <div class="nodeAttrItem ChildrenBox">
+                            <table cellspacing="0" cellpadding="0" style="text-align: center;margin-top: 3px;border-bottom:1px #aaa solid;width: 100%;border-right:1px #aaa solid;width: 100%;">
+                                <tr>
+                                    <th style="width: 20%;"><span>Node Class</span></th>
+                                        <th style="width: 25%;">Name</th>
+                                        <th style="width: 25%;">Data Type</th>
+                                        <th>增删</th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <select name="ChildNodeClass" id="ChildNodeClass" style="width: 90%;">
+                                            <option value="Object">Object</option>
+                                            <option value="Variable">Variable</option>
+                                        </select>
+                                    </td>
+                                    <td><input type="text" name="ChildName" id="ChildName"></td>
+                                    <td>
+                                        <select name="ChildDataType" id="ChildDataType" style="width: 90%;">
+                                            <option value="int">int</option>
+                                            <option value="double">double</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <a href="#">+</a>
+                                        <a href="#">-</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <select name="ChildNodeClass" id="ChildNodeClass" style="width: 90%;">
+                                            <option value="...">...</option>
+                                            <option value="Object">Object</option>
+                                            <option value="Variable">Variable</option>
+                                        </select>
+                                    </td>
+                                    <td><input type="text" name="ChildName" id="ChildName"></td>
+                                    <td>
+                                        <select name="ChildDataType" id="ChildDataType" style="width: 90%;">
+                                            <option value="int">int</option>
+                                            <option value="double">double</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <a href="#">+</a>
+                                        <a href="#">-</a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="start">
+            <button type="button" onclick="changeIMG();setInterval('getUserInfo()',5000)">地址空间配置</button>
+        </div>
+    </div>
+    <div id="left_box">
+        <div style="height: 80px;"></div>
+        <div><a href="../index.html">网关信息</a></div>
+        <div style="background-color: #658ebd;color: #ffffff;font-weight: bold;">模型编辑</div>
+        <div><a href="./real-timeInfo.html">实时状态</a></div>
+        <div><a href="./ctrlGateway.html">网关控制</a></div>
+        <div><a href="./about.html">关 于</a></div>
+        <div><a href="./help.html">帮 助</a></div>
+    </div>
+    <script>
+        d = new dTree('d');
+        d.add(0,-1,'OPC UA NameSpace',"javascript:test()");
+        d.add(1,0,'Objects');
+        d.add(2,0,'Types');
+        d.add(3,1,'温湿度计');
+        d.add(4,3,'温度');
+        d.add(5,3,'湿度');
+        d.add(6,0,'Views');
+        document.getElementById("devTree").innerHTML = document.getElementById("devTree").innerHTML + d;
+    </script>
+</body>
+</html> 

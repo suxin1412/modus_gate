@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="树莓派网关">
+    <meta name="description" content="OPCUA Gateway.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="StyleSheet" href="./dtree/dtree.css" type="text/css">
+    <title>OPC UA Gateway</title>
+    <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script> 
+    <script type="text/javascript" src="./dtree/dtree.js"></script>
+    <script src="editModel.js"></script>
+    <script>
+        document.onload = loadCurrentModle();
+    </script>
+</head>
+<body>
+    <div id="TopBar">
+        <p><span style="color:aquamarine;">( • ̀ω•́ )✧</span>  | OPC UA<a href="Javascript:displayLOG();">网关控制台</a><span style="font-size: 30px;"> V1.0</span></p>
+    </div>
+    <div id="right_box">
+        <div id="operate">
+            <span style="font-size: 25px;padding: 20px 0 10px 40px;width: 230px;display: inline-block;">网关配置文件选择</span>
+            <div id="CurrentConfigFileHand">
+            </div>
+            <div style="border: none;background-color: transparent;padding-left: 0;"> 
+                <button type="button" onclick="">载入配置文件</button>
+                <button type="button" onclick="">新建配置文件</button>
+                <button type="button" onclick="">应用当前配置</button>
+            </div>
+        </div>
+        <div id="ModelEdit">
+            <div style="font-size: 25px;padding: 20px 0 0 40px;width: 230px;">OPC UA 模型编辑</div>
+            <div class="combox">
+                <div id="devTree" >
+                    <div class="nodeAttrTitle">&nbsp;地址空间：</div>
+                </div>
+                <div id="nodeAttributes">
+                    ...
+                </div>
+            </div>
+        </div>
+        <div id="log"></div>
+    </div>
+    <div id="left_box">
+        <div style="height: 80px;"></div>
+        <div><a href="../index.html">网关信息</a></div>
+        <div style="background-color: #658ebd;color: #ffffff;font-weight: bold;">模型编辑</div>
+        <div><a href="./real-timeInfo.html">实时状态</a></div>
+        <div><a href="./ctrlGateway.html">网关控制</a></div>
+        <div><a href="./about.html">关 于</a></div>
+        <div><a href="./help.html">帮 助</a></div>
+    </div>
+</body>
+</html> 

@@ -1,0 +1,260 @@
+
+* {
+    margin: 0;
+    padding: 0;
+
+}
+body {
+    margin: 0;
+}
+a{
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+button{
+    height: 2.2em;
+    padding: 0 10px;
+    font-size: 14px;
+    font-style: 黑体;
+    background-color: #5b6980;
+    color: rgb(255, 255, 255);
+    border-radius: 7px;
+    border: none;
+    margin: 3px 3px 3px 3px ;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 6px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+button:hover{
+    background-color: #3e4c63;
+}
+
+#right_box{
+    position: absolute;
+    left: 200px;
+    right: 0;
+    height: 1300px;
+    width: auto;
+    background-color: #e7edf7;
+}
+#left_box{
+    width: 200px;
+    height: 1300px;
+    background-color:#5b6980db;
+}
+
+#TopBar {
+    height: 60px;
+    background-color: #5b6980;
+    position: relative;
+    z-index: 10;
+    box-shadow: 0px 1px 1px 0px rgba(50,50,50,0.6);
+}
+#TopBar p,#TopBar a{
+    margin: 0;
+    line-height: 60px;
+    text-align: left;
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+    font-family: 微软雅黑;
+    font-weight: lighter;
+}
+#right_box>*{
+    margin: 20px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 3px #c2c2c2;
+}
+/* #right_box>*>*{
+    margin: 10px;
+} */
+#left_box>*{
+    width: 160px;
+    height: 27px;
+    margin: 0 20px;
+    padding-top: 6px;
+    padding-bottom: 6px ;
+    border-bottom: 1px rgb(204, 204, 204) solid;
+    color: #ccc;
+    text-align: center;
+    font-size: 20px ;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+#left_box>*:hover{
+    background-color: #5b6980;
+    
+}
+#left_box a{
+    font-size: 16px ;
+    color: #fffee7;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+#opcuainfo{
+    padding-bottom: 50px;
+    display: inline-block;
+}
+#ModelEdit{
+    padding-bottom: 50px;
+}
+#opcuainfo::after{
+    display: inline-block;
+    content: "";
+    clear: both;
+}
+.combox{
+    display: inline-block;
+    width: 100%;
+}
+.devBox{
+    margin-left: 3%;
+    margin-top: 20px;
+    width: 90%;
+    /* height: 400px;  */
+    /* background-color: rgb(32, 32, 32); */
+    float: left;
+    overflow: hidden;
+    border: 3px #c7c7c7 solid;
+}
+.devBox::after{
+    display: inline-block;
+    content: "";
+    clear: both;
+}
+.devBox>*{
+    margin: 10px;
+}
+.dev{
+    float: left;
+    width: 250px;
+    height: 100px;
+    background-color: rgba(25, 46, 78, 0.7);
+    color: rgb(255, 255, 255);
+    padding-top: 8px;
+}
+#devinfo{
+    height: 700px;
+}
+.textTitle{
+    margin-top: 2em;
+    text-align: center;
+    font-size: 40px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: inline-block;
+    width: 100%;
+}
+.textContext{
+    width: 100%;
+    text-align: left;
+    font-size: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: inline-block;
+    margin-top: 3em;
+    color: dimgray;
+}
+.textTable{
+    margin-left: 34%;
+    width: auto;
+    /* border: 1px black solid; */
+}
+#left_box::before{
+    content: icon ;
+}
+#devTree{
+    /* margin-left: 3%;
+    margin-top: 20px;
+    width: 25%;
+    float: left; */
+    margin-top: 20px;
+    overflow: hidden;
+    border: 1px #5b6980  solid;
+    border-top: 0px;
+    background-color: #f5f5f5;
+}
+#floatLeftBox{
+    margin-left: 3%;
+    margin-top: 20px;
+    width: 25%;
+    float: left;
+    overflow: hidden;
+}
+#nodeAttributes{
+    width: 67%;
+    height: 100%;
+    margin-top: 20px;
+    margin-left: 1%;
+    float: left;
+    overflow: hidden;
+    border: 1px #5b6980  solid;
+    background-color: #f5f5f5;
+    /* padding: 5px; */
+    font-size: 13px;
+    color: rgb(0, 87, 79);
+    /* display: none; */
+}
+.nodeAttrBox{
+    width: 100%;
+}
+.nodeAttrTitle{
+    padding: 2px;
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+    font-size: 16px;
+    color: floralwhite;
+    background-color: rgba(25, 46, 78, 0.7);
+}
+.ChildrenBox td,
+.ChildrenBox th{
+    border-top:0px #aaa solid;
+    border-left:0px #aaa solid;
+
+}
+#operate{
+    padding: 5px;
+    padding-bottom: 20px;
+}
+#operate>div{
+    border: 1px dotted #785;
+    width: auto;
+    margin: 5px 3% ;
+    /* height: 2em; */
+    padding: 5px;
+    background-color: #f5f5f5;
+    font-size: 14px;
+    line-height: 1.5em;
+    font-family: 'Courier New', Courier, monospace;
+}
+#CurrentConfigFileHand{
+    border: 1px #5b6980  solid;
+    background-color: #f5f5f5;
+    /* border: 1px dotted #785;
+    width: auto;
+    margin: 10px 3% ; */
+    /* height: 2em; */
+    /* padding: 5px;
+    background-color: #f5f5f5; */
+    font-size: 14px;
+    line-height: 1.5em;
+    font-family: 'Courier New', Courier, monospace;
+}
+.configFileNameTag{
+    margin: 1px;
+    background-color: #e3e9ee;
+}
+.configFileNameTag:hover{
+    background-color: #fff;
+}
+.configFileNameTag>*{
+    width: 14px;
+    margin: 2px 0 0 4px;
+    vertical-align: top;
+}
+.nodeAttrItem{
+    font-size: 13px;
+    color: rgb(0, 87, 79);
+    margin: 5px;
+    margin-top: 0;
+    margin-bottom: 0px;
+}
+#childrenNodeList button{
+    height: 19px;
+    padding: 0 5px;
+}

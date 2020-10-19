@@ -1,0 +1,95 @@
+Analyse Node :: Index: 0 	Type: Object 	name:锅炉
+Analyse Node :: Index: 0 	Type: Variable 	name:炉膛温度
+	TaskList Node  :: Index: 0 	Addr:b5e080d0
+		Node Info  :: refreshFrequency: 1000 	MapRadio:1.900000
+Analyse Node :: Index: 1 	Type: Variable 	name:水冷壁温度
+	TaskList Node  :: Index: 1 	Addr:b5e08120
+		Node Info  :: refreshFrequency: 2000 	MapRadio:1.900000
+Analyse Node :: Index: 2 	Type: Object 	name:深结点
+Analyse Node :: Index: 0 	Type: Object 	name:深结点1
+Analyse Node :: Index: 0 	Type: Object 	name:深结点2
+Analyse Node :: Index: 0 	Type: Object 	name:深结点3
+Analyse Node :: Index: 0 	Type: Object 	name:深结点4
+Analyse Node :: Index: 0 	Type: Variable 	name:data
+	TaskList Node  :: Index: 2 	Addr:b5e08170
+		Node Info  :: refreshFrequency: 3000 	MapRadio:3.000000
+Analyse Node :: Index: 1 	Type: Object 	name:风机
+Analyse Node :: Index: 0 	Type: Variable 	name:送风量
+	TaskList Node  :: Index: 3 	Addr:b5e081c0
+		Node Info  :: refreshFrequency: 4000 	MapRadio:1.900000
+Analyse Node :: Index: 1 	Type: Variable 	name:风速
+	TaskList Node  :: Index: 4 	Addr:b5e08210
+		Node Info  :: refreshFrequency: 5000 	MapRadio:1.900000
+Analyse Node :: Index: 2 	Type: Object 	name:汽轮机
+Analyse Node :: Index: 0 	Type: Variable 	name:转速
+	TaskList Node  :: Index: 5 	Addr:b5e08260
+		Node Info  :: refreshFrequency: 6000 	MapRadio:1.900000
+Analyse Node :: Index: 1 	Type: Variable 	name:进气侧压力
+	TaskList Node  :: Index: 6 	Addr:b5e082b0
+		Node Info  :: refreshFrequency: 7000 	MapRadio:1.900000
+Analyse Node :: Index: 2 	Type: Variable 	name:主蒸汽压力
+	TaskList Node  :: Index: 7 	Addr:b5e08300
+		Node Info  :: refreshFrequency: 8000 	MapRadio:1.900000
+Analyse Node :: Index: 3 	Type: Variable 	name:乏汽压力
+	TaskList Node  :: Index: 8 	Addr:b5e08350
+		Node Info  :: refreshFrequency: 9000 	MapRadio:1.000000
+Analyse Node :: Index: 3 	Type: Object 	name:发电机
+Analyse Node :: Index: 0 	Type: Variable 	name:电压
+	TaskList Node  :: Index: 9 	Addr:b5e083a0
+		Node Info  :: refreshFrequency: 1500 	MapRadio:2.000000
+Analyse Node :: Index: 1 	Type: Variable 	name:频率
+	TaskList Node  :: Index: 10 	Addr:b5e083f0
+		Node Info  :: refreshFrequency: 2050 	MapRadio:3.000000
+Analyse Node :: Index: 2 	Type: Variable 	name:相位
+	TaskList Node  :: Index: 11 	Addr:b5e08440
+		Node Info  :: refreshFrequency: 3063 	MapRadio:4.000000
+Creat Task List........ok
+Open ttyS1........ok
+Polling Queue	 index:0, RQ:1000
+Polling Queue	 index:1, RQ:2000
+Polling Queue	 index:2, RQ:3000
+Polling Queue	 index:3, RQ:4000
+Polling Queue	 index:4, RQ:5000
+Polling Queue	 index:5, RQ:6000
+Polling Queue	 index:6, RQ:7000
+Polling Queue	 index:7, RQ:8000
+Polling Queue	 index:8, RQ:9000
+Polling Queue	 index:9, RQ:1500
+Polling Queue	 index:10, RQ:2050
+Polling Queue	 index:11, RQ:3063
+Polling_TaskListLength:11
+p->registerAddress:1	Reg:0 1	[2020-05-31 17:06:21.495 (UTC+0800)] [33mwarn/server[0m	Username/Password configured, but no encrypting SecurityPolicy. This can leak credentials on the network.
+[2020-05-31 17:06:21.497 (UTC+0800)] [32minfo/session[0m	Connection 0 | SecureChannel 0 | Session g=00000001-0000-0000-0000-000000000000 | AddNodes: No TypeDefinition for ns=1;s=锅炉; Use the default TypeDefinition for the Variable/Object
+[2020-05-31 17:06:21.497 (UTC+0800)] [32minfo/session[0m	Connection 0 | SecureChannel 0 | Session g=00000001-0000-0000-0000-000000000000 | AddNodes: No TypeDefinition for ns=1;s=炉膛温度; Use the default TypeDefinition for the Variable/Object
+Has add NodeID 炉膛温度, it's hash is 1265340110, index is 0.
+[2020-05-31 17:06:21.497 (UTC+0800)] [32minfo/session[0m	Connection 0 | SecureChannel 0 | Session g=00000001-0000-0000-0000-000000000000 | AddNodes: No TypeDefinition for ns=1;s=水冷壁温度; Use the default TypeDefinition for the Variable/Object
+Has add NodeID 水冷壁温度, it's hash is -2038619502, index is 1.
+[2020-05-31 17:06:21.497 (UTC+0800)] [32minfo/session[0m	Connection 0 | SecureChannel 0 | Session g=00000001-0000-0000-0000-000000000000 | AddNodes: No TypeDefinition for ns=1;s=深结点; Use the default TypeDefinition for the Variable/Object
+[2020-05-31 17:06:21.498 (UTC+0800)] [32minfo/session[0m	Connection 0 | SecureChannel 0 | Session g=00000001-0000-0000-0000-000000000000 | AddNodes: No TypeDefinition for ns=1;s=深结点1; Use the default TypeDefinition for the Variable/Object
+[2020-05-31 17:06:21.498 (UTC+0800)] [32minfo/session[0m	Connection 0 | SecureChannel 0 | Session g=00000001-0000-0000-0000-000000000000 | AddNodes: No TypeDefinition for ns=1;s=深结点2; Use the default TypeDefinition for the Variable/Object
+[2020-05-31 17:06:21.498 (UTC+0800)] [32minfo/session[0m	Connection 0 | SecureChannel 0 | Session g=00000001-0000-0000-0000-000000000000 | AddNodes: No TypeDefinition for ns=1;s=深结点3; Use the default TypeDefinition for the Variable/Object
+[2020-05-31 17:06:21.499 (UTC+0800)] [32minfo/session[0m	Connection 0 | SecureChannel 0 | Session g=00000001-0000-0000-0000-000000000000 | AddNodes: No TypeDefinition for ns=1;s=深结点4; Use the default TypeDefinition for the Variable/Object
+[2020-05-31 17:06:21.499 (UTC+0800)] [32minfo/session[0m	Connection 0 | SecureChannel 0 | Session g=00000001-0000-0000-0000-000000000000 | AddNodes: No TypeDefinition for ns=1;s=data; Use the default TypeDefinition for the Variable/Object
+Has add NodeID data, it's hash is -1522773583, index is 2.
+[2020-05-31 17:06:21.499 (UTC+0800)] [32minfo/session[0m	Connection 0 | SecureChannel 0 | Session g=00000001-0000-0000-0000-000000000000 | AddNodes: No TypeDefinition for ns=1;s=风机; Use the default TypeDefinition for the Variable/Object
+[2020-05-31 17:06:21.500 (UTC+0800)] [32minfo/session[0m	Connection 0 | SecureChannel 0 | Session g=00000001-0000-0000-0000-000000000000 | AddNodes: No TypeDefinition for ns=1;s=送风量; Use the default TypeDefinition for the Variable/Object
+Has add NodeID 送风量, it's hash is 1634802780, index is 3.
+[2020-05-31 17:06:21.501 (UTC+0800)] [32minfo/session[0m	Connection 0 | SecureChannel 0 | Session g=00000001-0000-0000-0000-000000000000 | AddNodes: No TypeDefinition for ns=1;s=风速; Use the default TypeDefinition for the Variable/Object
+Has add NodeID 风速, it's hash is -987666863, index is 4.
+[2020-05-31 17:06:21.502 (UTC+0800)] [32minfo/session[0m	Connection 0 | SecureChannel 0 | Session g=00000001-0000-0000-0000-000000000000 | AddNodes: No TypeDefinition for ns=1;s=汽轮机; Use the default TypeDefinition for the Variable/Object
+[2020-05-31 17:06:21.503 (UTC+0800)] [32minfo/session[0m	Connection 0 | SecureChannel 0 | Session g=00000001-0000-0000-0000-000000000000 | AddNodes: No TypeDefinition for ns=1;s=转速; Use the default TypeDefinition for the Variable/Object
+Has add NodeID 转速, it's hash is -439106324, index is 5.
+[2020-05-31 17:06:21.503 (UTC+0800)] [32minfo/session[0m	Connection 0 | SecureChannel 0 | Session g=00000001-0000-0000-0000-000000000000 | AddNodes: No TypeDefinition for ns=1;s=进气侧压力; Use the default TypeDefinition for the Variable/Object
+Has add NodeID 进气侧压力, it's hash is 1862445436, index is 6.
+[2020-05-31 17:06:21.503 (UTC+0800)] [32minfo/session[0m	Connection 0 | SecureChannel 0 | Session g=00000001-0000-0000-0000-000000000000 | AddNodes: No TypeDefinition for ns=1;s=主蒸汽压力; Use the default TypeDefinition for the Variable/Object
+Has add NodeID 主蒸汽压力, it's hash is -773691564, index is 7.
+[2020-05-31 17:06:21.504 (UTC+0800)] [32minfo/session[0m	Connection 0 | SecureChannel 0 | Session g=00000001-0000-0000-0000-000000000000 | AddNodes: No TypeDefinition for ns=1;s=乏汽压力; Use the default TypeDefinition for the Variable/Object
+Has add NodeID 乏汽压力, it's hash is 172335901, index is 8.
+[2020-05-31 17:06:21.504 (UTC+0800)] [32minfo/session[0m	Connection 0 | SecureChannel 0 | Session g=00000001-0000-0000-0000-000000000000 | AddNodes: No TypeDefinition for ns=1;s=发电机; Use the default TypeDefinition for the Variable/Object
+[2020-05-31 17:06:21.504 (UTC+0800)] [32minfo/session[0m	Connection 0 | SecureChannel 0 | Session g=00000001-0000-0000-0000-000000000000 | AddNodes: No TypeDefinition for ns=1;s=电压; Use the default TypeDefinition for the Variable/Object
+Has add NodeID 电压, it's hash is 757640435, index is 9.
+[2020-05-31 17:06:21.505 (UTC+0800)] [32minfo/session[0m	Connection 0 | SecureChannel 0 | Session g=00000001-0000-0000-0000-000000000000 | AddNodes: No TypeDefinition for ns=1;s=频率; Use the default TypeDefinition for the Variable/Object
+Has add NodeID 频率, it's hash is -1220570699, index is 10.
+[2020-05-31 17:06:21.506 (UTC+0800)] [32minfo/session[0m	Connection 0 | SecureChannel 0 | Session g=00000001-0000-0000-0000-000000000000 | AddNodes: No TypeDefinition for ns=1;s=相位; Use the default TypeDefinition for the Variable/Object
+Has add NodeID 相位, it's hash is -1404799991, index is 11.
+[2020-05-31 17:06:21.507 (UTC+0800)] [32minfo/network[0m	TCP network layer listening on opc.tcp://raspberrypi:14523/
